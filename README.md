@@ -1,0 +1,1 @@
+# Smeťák Wind Status
