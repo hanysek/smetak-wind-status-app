@@ -266,3 +266,8 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   url: 'https://example.com',
   strategy: 'mobile'
 }));
+
+// Heroku build task
+gulp.task('heroku:release', function(cb) {
+  runSequence(['clean', 'build']);
+});
