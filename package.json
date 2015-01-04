@@ -69,5 +69,9 @@
     "jshint": "jshint ./src gulpfile.js",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update"
-  }
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "server.js"
 }
