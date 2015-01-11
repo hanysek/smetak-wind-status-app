@@ -37,11 +37,13 @@ var Wind = React.createClass({
       /* jshint ignore:start */
       <div>
         <div className="wind">
-          <div className="wind-speed">
-            <label>Wind Speed</label>: {windSpeed}&nbsp;m/s
+          <div className="metric">
+            <label>Wind Speed</label>
+            <div className="value">{windSpeed}&nbsp;<span className="unit">m/s</span></div>
           </div>
-          <div className="wind-speed">
-            <label>Wind Direction</label>: {windDirection}&deg;
+          <div className="metric">
+            <label>Wind Direction</label>
+            <div className="value">{windDirection}<span className="unit">&deg;</span></div>
           </div>
         </div>
         <div className="datetime">
