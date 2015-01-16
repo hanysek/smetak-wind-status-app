@@ -10,13 +10,12 @@
 
 var React = require('react');
 var MeteoDataStore = require('../../stores/MeteoDataStore');
-var WindBarb = require('./WindBarb');
 
 function getStateFromStore() {
   return MeteoDataStore.get();
 }
 
-var Wind = React.createClass({
+var WindBarb = React.createClass({
 
   getInitialState: function() {
     return getStateFromStore();
@@ -31,28 +30,13 @@ var Wind = React.createClass({
   },
 
   render: function() {
-    var windSpeed = this.state.windspeed || '-';
-    var windDirection = this.state.winddir || '-';
-    var updated = this.state.mdate || '';
+    var rotateStyle = {
+      transform: 'rotate(' + this.state.winddir + 'deg)'
+    };
     return (
       /* jshint ignore:start */
-      <div>
-        <div className="wind">
-          <div className="metric">
-            <label>Wind Speed</label>
-            <div className="value">{windSpeed}&nbsp;<span className="unit">m/s</span></div>
-          </div>
-          <div className="metric">
-            <label>Wind Direction</label>
-            <div className="value">{windDirection}<span className="unit">&deg;</span></div>
-          </div>
-          <div className="metric datetime">
-            <label>Updated</label>
-            <div className="value">{updated}</div>
-          </div>
-        </div>
-
-        <WindBarb />
+      <div className="windbarb" style={rotateStyle}>
+      <p>&#34;</p>
       </div>
       /* jshint ignore:end */
     );
@@ -68,4 +52,4 @@ var Wind = React.createClass({
 
 });
 
-module.exports = Wind;
+module.exports = WindBarb;
