@@ -11,7 +11,8 @@ module.exports = {
   defaults: {
 
     page: {
-      title: 'Smeťák Wind',
+      pageClass: '',
+      title: 'Fueee',
       description: 'Smeťák wind spot current wind.',
       keywords: null
 

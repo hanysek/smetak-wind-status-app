@@ -19,6 +19,7 @@ var Navbar = require('../layout/Navbar');
  */
 function getState() {
   return {
+    pageClass: PageStore.get().pageClass,
     title: PageStore.get().title
   };
 }
@@ -36,12 +37,13 @@ var DefaultLayout = React.createClass({
   },
 
   render() {
+    var pageClass = 'main page ' + this.state.pageClass;
     return (
       /* jshint ignore:start */
       <div>
         <Navbar />
 
-        <div className="main" role="main">
+        <div className={pageClass} role="main">
           {this.props.children}
         </div>
 

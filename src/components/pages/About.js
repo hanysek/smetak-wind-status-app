@@ -19,7 +19,7 @@ var AboutPage = React.createClass({
   },
 
   componentWillMount() {
-    PageActions.set({title: 'About'});
+    PageActions.set({pageClass: 'about', title: 'About'});
   },
 
   render() {

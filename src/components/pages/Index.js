@@ -20,7 +20,7 @@ var HomePage = React.createClass({
   },
 
   componentWillMount() {
-    PageActions.set({title: 'Fueee'});
+    PageActions.set({pageClass: 'home', title: 'Fueee'});
   },
 
   render() {
