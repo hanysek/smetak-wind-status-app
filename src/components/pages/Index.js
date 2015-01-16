@@ -20,7 +20,7 @@ var HomePage = React.createClass({
   },
 
   componentWillMount() {
-    PageActions.set({title: 'Smetak Wind Status'});
+    PageActions.set({title: 'Fueee'});
   },
 
   render() {

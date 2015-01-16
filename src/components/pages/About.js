@@ -69,6 +69,11 @@ var AboutPage = React.createClass({
           font</a> Weather font with wind barbs.
         </p>
 
+        <p>
+          <a href="http://www.heroku.com/" target="_blank">Heroku
+          </a> Powered by Heroku
+        </p>
+
       </div>
       /* jshint ignore:end */
     );
