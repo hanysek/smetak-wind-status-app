@@ -28,14 +28,47 @@ var AboutPage = React.createClass({
       <div className="container">
         <h1>About</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat tortor fermentum mi
-          fermentum dignissim. Nullam vel ipsum ut ligula elementum lobortis. Maecenas aliquam, massa laoreet
-          lacinia pretium, nisi urna venenatis tortor, nec imperdiet tellus libero efficitur metus. Fusce
-          semper posuere ligula, et facilisis metus bibendum interdum. Mauris at mauris sit amet sem pharetra
-          commodo a eu leo. Nam at est non risus cursus maximus. Nam feugiat augue libero, id consectetur
-          tortor bibendum non. Quisque nec fringilla lorem. Nullam efficitur vulputate mauris, nec maximus leo
-          dignissim id.
+          Welcome in simple web page displaying current wind status for <a href="http://www.smetak.banda.cz/" target="_blank">Smeťák Kite Spot</a>.
+          Smeťák is the landkiting kite spot in Prague. You can find more info about the spot
+          on <a href="http://www.smetak.banda.cz/" target="_blank">http://www.smetak.banda.cz/</a>.
         </p>
+
+        <p>
+          I have created this page because I am a professional programmer, I like kiting
+          and I needed some simple, but for some people useful project to try new, fancy
+          technologies like ReactJS, Flux and others.
+        </p>
+
+        <p>
+          If you are interested in how it is developed you can find source code
+          on <a href="https://github.com/hanysek/smetak-wind-status-app" target="_blank">https://github.com/hanysek/smetak-wind-status-app</a>.
+        </p>
+
+        <h2>Wind Status</h2>
+
+        <p>
+          We use <a href="http://www.tsk-praha.cz/wps/portal/root/aktualni-doprava/meteocidla" target="_blank">TSK Praha
+           meteo sensors</a> to get actual wind status and wind direction. We use meteo sensor located in Uhříněves which
+          is closed to Smeťák Kite Spot. It means that wind is mostly a little bit stronger on spot:)
+        </p>
+
+        <h2>Credits</h2>
+
+        <p>
+          <a href="http://www.tsk-praha.cz" target="_blank">TSK
+          Praha</a> Meteo information provider for Prague area.
+        </p>
+
+        <p>
+          <a href="https://github.com/kriasoft/react-starter-kit" target="_blank">React /
+          Flux &nbsp;Starter Kit</a> Thanks for good starting point for isomorphic application.
+        </p>
+
+        <p>
+          <a href="http://www.fonts2u.com/esri-weather.font" target="_blank">ESRI Weather
+          font</a> Weather font with wind barbs.
+        </p>
+
       </div>
       /* jshint ignore:end */
     );
