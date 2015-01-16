@@ -49,6 +49,8 @@ var DefaultLayout = React.createClass({
           <div className="container">
             <p className="text-muted">
               <span>© Jan Šimůnek</span>
+              <span><Link to="/">Home</Link></span>
+              <span><Link to="/about">About</Link></span>
             </p>
           </div>
         </div>
