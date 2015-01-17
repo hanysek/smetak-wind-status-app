@@ -11,6 +11,7 @@
 var React = require('react');
 var MeteoDataStore = require('../../stores/MeteoDataStore');
 var WindBarb = require('./WindBarb');
+var WindUtils = require('../../utils/WindUtils');
 
 function getStateFromStore() {
   return MeteoDataStore.get();
@@ -33,26 +34,36 @@ var Wind = React.createClass({
   render: function() {
     var windSpeed = this.state.windspeed || '-';
     var windDirection = this.state.winddir || '-';
-    var updated = this.state.mdate || '';
+    var updatedTime = WindUtils.getUpdatedTime(this.state.mdate) || '';
+    var updatedDate = WindUtils.getUpdatedDate(this.state.mdate) || '';
+
     return (
       /* jshint ignore:start */
-      <div>
-        <div className="wind">
-          <div className="metric">
-            <label>Wind Speed</label>
-            <div className="value">{windSpeed}&nbsp;<span className="unit">m/s</span></div>
+      <div className="container wind">
+
+        <div className="row">
+
+          <div className="col-xs-6">
+            <div className="metric">
+              <label>Wind Speed</label>
+              <div className="value">{windSpeed}&nbsp;<span className="unit">m/s</span></div>
+            </div>
+            <div className="metric">
+              <label>Wind Direction</label>
+              <div className="value">{windDirection}<span className="unit">&deg;</span></div>
+            </div>
+            <div className="metric datetime">
+              <label>Updated</label>
+              <div className="value value-time">{updatedTime}</div>
+              <div className="value value-date">{updatedDate}</div>
+            </div>
           </div>
-          <div className="metric">
-            <label>Wind Direction</label>
-            <div className="value">{windDirection}<span className="unit">&deg;</span></div>
-          </div>
-          <div className="metric datetime">
-            <label>Updated</label>
-            <div className="value">{updated}</div>
+
+          <div className="col-xs-6">
+            <WindBarb />
           </div>
         </div>
 
-        <WindBarb />
       </div>
       /* jshint ignore:end */
     );

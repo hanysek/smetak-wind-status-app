@@ -10,6 +10,7 @@
 
 var React = require('react');
 var MeteoDataStore = require('../../stores/MeteoDataStore');
+var WindUtils = require('../../utils/WindUtils');
 
 function getStateFromStore() {
   return MeteoDataStore.get();
@@ -31,12 +32,13 @@ var WindBarb = React.createClass({
 
   render: function() {
     var rotateStyle = {
-      transform: 'rotate(' + this.state.winddir + 'deg)'
+      transform: 'rotate(' + WindUtils.getWindBarbDirection(this.state.winddir) + 'deg)'
     };
+    var windBarbSymbol = WindUtils.getWindBarbSymbol(this.state.windspeed);
     return (
       /* jshint ignore:start */
-      <div className="windbarb" style={rotateStyle}>
-      <p>&#34;</p>
+      <div className="windbarb">
+        <span className="windbarbsymbol" style={rotateStyle}>{windBarbSymbol}</span>
       </div>
       /* jshint ignore:end */
     );
