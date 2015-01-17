@@ -27,7 +27,7 @@ var argv = require('minimist')(process.argv.slice(2));
 // Settings
 var DEST = './build';                         // The build output folder
 var RELEASE = !!argv.release;                 // Minimize and optimize during a build?
-var GOOGLE_ANALYTICS_ID = 'UA-XXXXX-X';       // https://www.google.com/analytics/web/
+var GOOGLE_ANALYTICS_ID = 'UA-58670434-1';    // https://www.google.com/analytics/web/
 var AUTOPREFIXER_BROWSERS = [                 // https://github.com/ai/autoprefixer
   'ie >= 10',
   'ie_mob >= 10',
