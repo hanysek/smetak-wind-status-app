@@ -12,7 +12,7 @@ module.exports = {
 
     page: {
       pageClass: '',
-      title: 'Fueee',
+      title: 'Fiů, fiů, fí',
       description: 'Smeťák wind spot current wind.',
       keywords: null
 
