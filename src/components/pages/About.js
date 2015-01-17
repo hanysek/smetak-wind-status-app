@@ -39,17 +39,19 @@ var AboutPage = React.createClass({
           technologies like ReactJS, Flux and others.
         </p>
 
-        <p>
-          If you are interested in how it is developed you can find source code
-          on <a href="https://github.com/hanysek/smetak-wind-status-app" target="_blank">https://github.com/hanysek/smetak-wind-status-app</a>.
-        </p>
-
-        <h2>Wind Status</h2>
+        <h2>Wind Data Source</h2>
 
         <p>
           We use <a href="http://www.tsk-praha.cz/wps/portal/root/aktualni-doprava/meteocidla" target="_blank">TSK Praha
-           meteo sensors</a> to get actual wind status and wind direction. We use meteo sensor located in Uhříněves which
+           meteo sensors</a> to get actual wind speed and wind direction. We use meteo sensor located in Uhříněves which
           is closed to Smeťák Kite Spot. It means that wind is mostly a little bit stronger on spot:)
+        </p>
+
+        <h2>Source Code</h2>
+
+        <p>
+          If you are interested in how it is developed you can find source code
+          on <a href="https://github.com/hanysek/smetak-wind-status-app" target="_blank">https://github.com/hanysek/smetak-wind-status-app</a>.
         </p>
 
         <h2>Credits</h2>
@@ -70,7 +72,7 @@ var AboutPage = React.createClass({
         </p>
 
         <p>
-          <a href="http://www.heroku.com/" target="_blank">Heroku
+          <a href="http://www.heroku.com/" target="_blank">Heroku.
           </a> Powered by Heroku
         </p>
 
