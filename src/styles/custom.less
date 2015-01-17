@@ -3,30 +3,37 @@
 // =============================================================================
 
 .main {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
-// Wind styles
+// Wind container style
 .wind {
+}
 
-  .metric {
+// Metrics
+.metric {
 
-    label {
-      font-size: 20px;
-    }
+  margin-bottom: 25px;
+  white-space: nowrap;
 
-    .value {
-      font-size: 60px;
-    }
+  label {
+    color: rgb(169, 169, 169);
+    font-size: @metric-label-font-size;
+  }
 
-    .value-time {
-      font-size: 40px;
-    }
+  .value {
+    font-size: @metric-value-font-size;
+    line-height: @metric-value-font-size;
+  }
 
-    .value-date {
-      font-size: 30px;
-    }
+  .value-time {
+    font-size: @metric-value-font-size / 2;
+    line-height: @metric-value-font-size / 2;
+  }
 
+  .value-date {
+    font-size: @metric-value-font-size / 3;
+    line-height: @metric-value-font-size / 3 + 10;
   }
 
 }
@@ -34,12 +41,13 @@
 // Wind barbs
 .windbarb {
     position: relative;
-    margin-left: 50px;
+    top: @wind-barb-top;
+    left: @wind-barb-left;
 }
 
 .windbarbsymbol {
   font-family: esri_weatherregular;
-  font-size: 230px;
+  font-size: @wind-barb-font-size;
   font-weight: bold;
   position: absolute;
 
