@@ -29,8 +29,7 @@ module.exports = {
       return String.fromCharCode(13);
     }
 
-    var windSpeedKts = windSpeed * 1.9;
-    console.log(windSpeedKts);
+    var windSpeedKts = this.convertWindSpeed(windSpeed);
     var position = Math.floor(windSpeedKts / 5) + 33 - 1;
     if (position < 33) position = 33;
 
@@ -40,6 +39,50 @@ module.exports = {
   // Properly rotate windbarb symbol
   getWindBarbDirection: function (windDirection) {
     return windDirection;
+  },
+
+  // Conver wind speed in m/s to knots/s
+  convertWindSpeed: function (windSpeed) {
+    return windSpeed * 1.9;
+  },
+
+
+  // Get wind speed color
+  getWindSpeedCssClass:function (windSpeed) {
+    var windSpeedKts = this.convertWindSpeed(windSpeed);
+    if (windSpeedKts <= 4) {
+      return 'wind-barb-color-4kts';
+    }
+    else if (windSpeedKts <= 8) {
+      return 'wind-barb-color-8kts';
+    }
+    else if (windSpeedKts <= 12) {
+      return 'wind-barb-color-12kts';
+    }
+    else if (windSpeedKts <= 16) {
+      return 'wind-barb-color-16kts';
+    }
+    else if (windSpeedKts <= 20) {
+      return 'wind-barb-color-20kts';
+    }
+    else if (windSpeedKts <= 24) {
+      return 'wind-barb-color-24kts';
+    }
+    else if (windSpeedKts <= 28) {
+      return 'wind-barb-color-28kts';
+    }
+    else if (windSpeedKts <= 32) {
+      return 'wind-barb-color-32kts';
+    }
+    else if (windSpeedKts <= 36) {
+      return 'wind-barb-color-36kts';
+    }
+    else if (windSpeedKts > 36) {
+      return 'wind-barb-color-40kts';
+    }
+    else {
+      return 'wind-barb-color-4kts';
+    }
   }
 
 };

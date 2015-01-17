@@ -32,13 +32,16 @@ var WindBarb = React.createClass({
 
   render: function() {
     var rotateStyle = {
-      transform: 'rotate(' + WindUtils.getWindBarbDirection(this.state.winddir) + 'deg)'
+      transform: 'rotate(' + WindUtils.getWindBarbDirection(this.state.winddir) + 'deg)',
+      '-ms-transform': 'rotate(' + WindUtils.getWindBarbDirection(this.state.winddir) + 'deg)',
+      '-webkit-transform': 'rotate(' + WindUtils.getWindBarbDirection(this.state.winddir) + 'deg)'
     };
     var windBarbSymbol = WindUtils.getWindBarbSymbol(this.state.windspeed);
+    var windBarbSymbolCss = 'windbarbsymbol ' + WindUtils.getWindSpeedCssClass(this.state.windspeed);
     return (
       /* jshint ignore:start */
       <div className="windbarb">
-        <span className="windbarbsymbol" style={rotateStyle}>{windBarbSymbol}</span>
+        <span className={windBarbSymbolCss} style={rotateStyle}>{windBarbSymbol}</span>
       </div>
       /* jshint ignore:end */
     );

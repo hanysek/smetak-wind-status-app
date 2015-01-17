@@ -28,6 +28,19 @@ var HomePage = React.createClass({
       /* jshint ignore:start */
       <div className="container">
         <Wind />
+
+        <ul className="list-inline windcolors">
+          <li className="wind-barb-bgcolor-4kts">4</li>
+          <li className="wind-barb-bgcolor-8kts">8</li>
+          <li className="wind-barb-bgcolor-12kts">12</li>
+          <li className="wind-barb-bgcolor-16kts">16</li>
+          <li className="wind-barb-bgcolor-20kts">20</li>
+          <li className="wind-barb-bgcolor-24kts">24</li>
+          <li className="wind-barb-bgcolor-28kts">28</li>
+          <li className="wind-barb-bgcolor-32kts">32</li>
+          <li className="wind-barb-bgcolor-36kts">36</li>
+          <li className="wind-barb-bgcolor-40kts">40</li>
+        </ul>
       </div>
       /* jshint ignore:end */
     );

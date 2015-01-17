@@ -32,7 +32,8 @@ var Wind = React.createClass({
   },
 
   render: function() {
-    var windSpeed = (this.state.windspeed !== undefined ? this.state.windspeed : '-');
+    var windSpeed = (this.state.windspeed !== undefined ? WindUtils.convertWindSpeed(this.state.windspeed).toFixed(2) : '-');
+    var windSpeedCss = 'value ' + WindUtils.getWindSpeedCssClass(this.state.windspeed);
     var windDirection = (this.state.winddir !== undefined ? this.state.winddir : '-');
     var updatedTime = WindUtils.getUpdatedTime(this.state.mdate) || '';
     var updatedDate = WindUtils.getUpdatedDate(this.state.mdate) || '';
@@ -46,7 +47,7 @@ var Wind = React.createClass({
           <div className="col-xs-6">
             <div className="metric">
               <label>Wind Speed</label>
-              <div className="value">{windSpeed}&nbsp;<span className="unit">m/s</span></div>
+              <div className={windSpeedCss}>{windSpeed}&nbsp;<span className="unit">kt</span></div>
             </div>
             <div className="metric">
               <label>Wind Direction</label>
