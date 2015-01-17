@@ -25,7 +25,7 @@ module.exports = {
   // Get wind barb symbol based on wind speed
   // TODO: unit test
   getWindBarbSymbol: function(windSpeed) {
-    if (! windSpeed) {
+    if (windSpeed === undefined || windSpeed < 1) {
       return String.fromCharCode(13);
     }
 

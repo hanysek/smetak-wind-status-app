@@ -32,8 +32,8 @@ var Wind = React.createClass({
   },
 
   render: function() {
-    var windSpeed = this.state.windspeed || '-';
-    var windDirection = this.state.winddir || '-';
+    var windSpeed = (this.state.windspeed !== undefined ? this.state.windspeed : '-');
+    var windDirection = (this.state.winddir !== undefined ? this.state.winddir : '-');
     var updatedTime = WindUtils.getUpdatedTime(this.state.mdate) || '';
     var updatedDate = WindUtils.getUpdatedDate(this.state.mdate) || '';
 
