@@ -41,6 +41,13 @@ var HomePage = React.createClass({
           <li className="wind-barb-bgcolor-36kts">36</li>
           <li className="wind-barb-bgcolor-40kts">40</li>
         </ul>
+
+        <ul className="list-unstyled">
+          <li><a href="http://www.windguru.cz/cz/index.php?sc=192127"
+            target="_blank" className="btn btn-default">
+            <span className="glyphicon glyphicon-link" aria-hidden="true"></span> Forecast on Windguru</a>
+          </li>
+        </ul>
       </div>
       /* jshint ignore:end */
     );
