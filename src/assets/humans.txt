@@ -3,11 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jan Šimůnek -- Developer -- @jansimunek
 
 # THANKS
 
-    <name>
+    TSK Praha
+    Kriasoft
+    ESRI
+    Heroku
 
 # TECHNOLOGY COLOPHON
 
