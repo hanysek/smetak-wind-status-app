@@ -1,0 +1,39 @@
+{
+    "count": 1,
+    "desc": "Aktu\u00e1ln\u00ed data pro \u010didlo 531804",
+    "results": [
+        {
+            "alarm": 0,
+            "devpoint": -4.96,
+            "district": null,
+            "html": "<div id=\"tsk-meteo-mapbubble\" class=\"meteo-bubble meteo531804\"><table><tr><td class=\"first name\">Meteo\u010didlo:</td><td title=\"Ozna\u010den\u00ed:  --  - M\u011bstsk\u00e1 \u010d\u00e1st:  --  - Ulice:  -- \" > 4-Uh\u0159\u00edn\u011bves</td></tr> <tr><td class=\"first mdate_cs\">\u010cas:</td><td> 30.01.2015 17:31:13</td></tr><tr><td class=\"first tempair\">Teplota vzduchu:</td><td> -0.46\u00b0C</td></tr><tr><td class=\"first temproa\">Teplota vozovky:</td><td> 1.83\u00b0C</td></tr><tr><td class=\"first tempfreez\">Teplota namrz\u00e1n\u00ed vozovky:</td><td> 0.0\u00b0C</td></tr><tr><td class=\"first humidity\">Vlhkost:</td><td> 71.63%</td></tr><tr><td class=\"first wind\">Rychlost a sm\u011br v\u011btru:</td><td> 3.69m/s&nbsp; <img src=\"/tskexport/images/ico/winddir/s11.gif\" alt=\"ZJZ\" title=\"ZJZ\" /></td></tr><tr><td class=\"first devpoint\">Rosn\u00fd bod:</td><td> -4.96\u00b0C</td></tr><tr><td class=\"first tanklevel\">Stav n\u00e1dr\u017ee sm\u011bs\u00ed:</td><td>  -- %</td></tr><tr><td class=\"first alarm\">Stav namrz\u00e1n\u00ed:</td><td> 0 - \u017dadn\u00e9 nebezpe\u010d\u00ed</td></tr><tr><td class=\"first technology\">Technologie:</td><td> Boschung</td></tr></table></div>",
+            "htmlweb": "<div id=\"tsk-meteo-mapbubble\" class=\"meteo-bubble meteo531804\"><table><tr><td class=\"first name\">Meteo\u010didlo:</td><td title=\"Ozna\u010den\u00ed:  --  - M\u011bstsk\u00e1 \u010d\u00e1st:  --  - Ulice:  -- \" > 4-Uh\u0159\u00edn\u011bves</td></tr> <tr><td class=\"first mdate_cs\">\u010cas:</td><td> 30.01.2015 17:31:13</td></tr><tr><td class=\"first tempair\">Teplota vzduchu:</td><td> -0.46\u00b0C</td></tr><tr><td class=\"first temproa\">Teplota vozovky:</td><td> 1.83\u00b0C</td></tr><tr><td class=\"first wind\">Rychlost a sm\u011br v\u011btru:</td><td> 3.69m/s&nbsp; <img src=\"/tskexport/images/ico/winddir/s11.gif\" alt=\"ZJZ\" title=\"ZJZ\" /></td></tr></table></div>",
+            "humidity": 71.63,
+            "id": 531804,
+            "imgBasePath": "/tskexport/images/ico/",
+            "lat": 50.02543,
+            "lng": 14.619888,
+            "mark": null,
+            "mdate": "2015-01-30 17:31:13.0",
+            "mname": "4-Uh\u0159\u00edn\u011bves",
+            "name": "4-Uh\u0159\u00edn\u011bves",
+            "nameShort": "4-Uh\u0159\u00edn\u011bves",
+            "prec": 0,
+            "prectype": 0,
+            "prefix": null,
+            "roawet": null,
+            "sgid": 1,
+            "spray": null,
+            "sprayprog": null,
+            "street": null,
+            "tanklevel": null,
+            "technology": "Boschung",
+            "tempair": -0.46,
+            "tempfreez": 0.0,
+            "temproa": 1.83,
+            "tmsalarm": 2,
+            "winddir": 245,
+            "windspeed": 4.12
+        }
+    ]
+}
