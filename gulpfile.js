@@ -76,8 +76,6 @@ gulp.task('clean', del.bind(null, [DEST]));
 // 3rd party libraries
 gulp.task('vendor', function() {
   return merge(
-    gulp.src('./node_modules/jquery/dist/**')
-      .pipe(gulp.dest(DEST + '/vendor/jquery-' + pkgs.jquery)),
     gulp.src('./node_modules/bootstrap/dist/fonts/**')
       .pipe(gulp.dest(DEST + '/fonts'))
   );
