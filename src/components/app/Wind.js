@@ -12,9 +12,14 @@ var React = require('react');
 var MeteoDataStore = require('../../stores/MeteoDataStore');
 var WindBarb = require('./WindBarb');
 var WindUtils = require('../../utils/WindUtils');
+var MeteoActions = require('../../actions/MeteoActions');
 
 function getStateFromStore() {
   return MeteoDataStore.get();
+}
+
+function getUnitsFromStore() {
+  return MeteoDataStore.getUnits();
 }
 
 var Wind = React.createClass({
@@ -31,8 +36,17 @@ var Wind = React.createClass({
     MeteoDataStore.removeChangeListener(this._onChange);
   },
 
+  handleClick: function() {
+    MeteoActions.changeUnits();
+  },
+
+  getWindSpeed: function() {
+    return (this.state.windSpeedUnits !== undefined ? this.state.windSpeedUnits.toFixed(2) : '-');
+  },
+
   render: function() {
-    var windSpeed = (this.state.windspeed !== undefined ? WindUtils.convertWindSpeed(this.state.windspeed).toFixed(2) : '-');
+    var windSpeed = this.getWindSpeed();
+    var windUnits = getUnitsFromStore();
     var windSpeedCss = 'value ' + WindUtils.getWindSpeedCssClass(this.state.windspeed);
     var windDirection = (this.state.winddir !== undefined ? this.state.winddir : '-');
     var updatedTime = WindUtils.getUpdatedTime(this.state.mdate) || '';
@@ -45,13 +59,14 @@ var Wind = React.createClass({
         <div className="row">
 
           <div className="col-xs-6">
-            <div className="metric">
+            <div className="metric" onClick={this.handleClick}>
               <label>Wind Speed</label>
-              <div className={windSpeedCss}>{windSpeed}&nbsp;<span className="unit">kt</span></div>
+              <div className={windSpeedCss}>{windSpeed}&nbsp;<span
+                className="units">{windUnits}</span></div>
             </div>
             <div className="metric">
               <label>Wind Direction</label>
-              <div className="value">{windDirection}<span className="unit">&deg;</span></div>
+              <div className="value">{windDirection}<span className="units">&deg;</span></div>
             </div>
             <div className="metric datetime">
               <label>Updated</label>
@@ -76,7 +91,6 @@ var Wind = React.createClass({
   _onChange: function() {
     this.setState(getStateFromStore());
   }
-
 
 });
 

@@ -14,7 +14,8 @@ var ActionTypes = keyMirror({
 
   SET_CURRENT_ROUTE: null,
   SET_CURRENT_PAGE: null,
-  RECEIVE_METEO_DATA: null
+  RECEIVE_METEO_DATA: null,
+  CHANGE_UNITS: null
 
 });
 

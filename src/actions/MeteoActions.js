@@ -18,6 +18,12 @@ module.exports = {
       actionType: ActionTypes.RECEIVE_METEO_DATA,
       meteoData: meteoData
     });
+  },
+
+  changeUnits: function() {
+    Dispatcher.handleViewAction({
+      actionType: ActionTypes.CHANGE_UNITS
+    });
   }
 
 };

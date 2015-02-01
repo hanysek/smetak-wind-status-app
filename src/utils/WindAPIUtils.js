@@ -9,15 +9,17 @@
 'use strict';
 
 var MeteoActions = require('../actions/MeteoActions');
+var $ = require('jquery');
 
 module.exports = {
 
   // Get current meteo from TSK Praha service
-  // http://www.tsk-praha.cz/tskexport/json/meteocidla/?singleRecord=true&actualdata=true&id=531804
   getMeteoData: function() {
-    console.log('Getting meteo data using external source');
+    console.log('Getting meteo data');
 
+    // TODO: Move TSK meteo service url to app config
     var url = 'http://www.tsk-praha.cz/tskexport/json/meteocidla/?singleRecord=true&actualdata=true&id=531804';
+    //var url = 'http://localhost:3000/test/metaodata.json'; // For local testing
     $.ajax({
       type: 'GET',
       url: url,
@@ -26,6 +28,7 @@ module.exports = {
         MeteoActions.receiveMeteoData(data.results[0]);
       },
       error: function(xhr, status, err) {
+        // TODO: Handle error (using actions)
         console.log('Error calling meteo data:' + status);
       }
     });

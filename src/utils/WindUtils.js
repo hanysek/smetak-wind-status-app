@@ -51,37 +51,37 @@ module.exports = {
   getWindSpeedCssClass:function (windSpeed) {
     var windSpeedKts = this.convertWindSpeed(windSpeed);
     if (windSpeedKts <= 4) {
-      return 'wind-barb-color-4kts';
+      return 'wind-barb-color-1';
     }
     else if (windSpeedKts <= 8) {
-      return 'wind-barb-color-8kts';
+      return 'wind-barb-color-2';
     }
     else if (windSpeedKts <= 12) {
-      return 'wind-barb-color-12kts';
+      return 'wind-barb-color-3';
     }
     else if (windSpeedKts <= 16) {
-      return 'wind-barb-color-16kts';
+      return 'wind-barb-color-4';
     }
     else if (windSpeedKts <= 20) {
-      return 'wind-barb-color-20kts';
+      return 'wind-barb-color-5';
     }
     else if (windSpeedKts <= 24) {
-      return 'wind-barb-color-24kts';
+      return 'wind-barb-color-6';
     }
     else if (windSpeedKts <= 28) {
-      return 'wind-barb-color-28kts';
+      return 'wind-barb-color-7';
     }
     else if (windSpeedKts <= 32) {
-      return 'wind-barb-color-32kts';
+      return 'wind-barb-color-8';
     }
     else if (windSpeedKts <= 36) {
-      return 'wind-barb-color-36kts';
+      return 'wind-barb-color-9';
     }
     else if (windSpeedKts > 36) {
-      return 'wind-barb-color-40kts';
+      return 'wind-barb-color-10';
     }
     else {
-      return 'wind-barb-color-4kts';
+      return 'wind-barb-color-1';
     }
   }
 
