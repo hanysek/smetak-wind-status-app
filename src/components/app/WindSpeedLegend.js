@@ -43,19 +43,21 @@ var WindSpeedLegend = React.createClass({
     var legend = legendScale[this.state.units];
     return (
     /* jshint ignore:start */
-    <div className="windspeedlegend" onClick={this.handleClick}>
+    <div className="windspeedlegend">
+      <a href="#" onClick={this.handleClick}>
         <ul className="list-inline windcolors">
-        <li className="wind-barb-bgcolor-1">{legend[1]}</li>
-        <li className="wind-barb-bgcolor-2">{legend[2]}</li>
-        <li className="wind-barb-bgcolor-3">{legend[3]}</li>
-        <li className="wind-barb-bgcolor-4">{legend[4]}</li>
-        <li className="wind-barb-bgcolor-5">{legend[5]}</li>
-        <li className="wind-barb-bgcolor-6">{legend[6]}</li>
-        <li className="wind-barb-bgcolor-7">{legend[7]}</li>
-        <li className="wind-barb-bgcolor-8">{legend[8]}</li>
-        <li className="wind-barb-bgcolor-9">{legend[9]}</li>
-        <li className="wind-barb-bgcolor-10">{legend[10]}</li>
-      </ul>
+          <li className="wind-barb-bgcolor-1">{legend[1]}</li>
+          <li className="wind-barb-bgcolor-2">{legend[2]}</li>
+          <li className="wind-barb-bgcolor-3">{legend[3]}</li>
+          <li className="wind-barb-bgcolor-4">{legend[4]}</li>
+          <li className="wind-barb-bgcolor-5">{legend[5]}</li>
+          <li className="wind-barb-bgcolor-6">{legend[6]}</li>
+          <li className="wind-barb-bgcolor-7">{legend[7]}</li>
+          <li className="wind-barb-bgcolor-8">{legend[8]}</li>
+          <li className="wind-barb-bgcolor-9">{legend[9]}</li>
+          <li className="wind-barb-bgcolor-10">{legend[10]}</li>
+        </ul>
+      </a>
     </div>
     /* jshint ignore:end */
     );

@@ -59,10 +59,12 @@ var Wind = React.createClass({
         <div className="row">
 
           <div className="col-xs-6">
-            <div className="metric" onClick={this.handleClick}>
+            <div className="metric">
               <label>Wind Speed</label>
-              <div className={windSpeedCss}>{windSpeed}&nbsp;<span
-                className="units">{windUnits}</span></div>
+              <a href="#" onClick={this.handleClick}>
+                <div className={windSpeedCss}>{windSpeed}&nbsp;<span
+                  className="units">{windUnits}</span></div>
+              </a>
             </div>
             <div className="metric">
               <label>Wind Direction</label>
